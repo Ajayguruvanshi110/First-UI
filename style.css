@@ -8,13 +8,22 @@
 
 
 :root {
-  --main-color: rgb(212, 184, 56);
+  --primary-color: rgba(66, 133, 244, 1);
+  --secondary-color:rgba(66, 134, 244, 0.541);
   --font-size: 16px;
   --border:2px solid black;
   --para-color:rgb(17, 17, 17);
 
 }
 
+
+.button{
+    padding: 15px 15px;
+    background-color: rgba(0, 0, 255, 0.192);
+    color: #fff;
+    border-radius: 16px;
+    border: none;
+}
 
 
 p{
@@ -23,8 +32,8 @@ p{
 }
 
 h1{
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 550;
 }
 
 h2{
@@ -60,7 +69,7 @@ header .top{
 header .left{
     display: flex;
     align-items: center;
-    width: 25%;
+    width: 24.3%;
     gap: 10px;
     padding: 0 20px;
     
@@ -70,11 +79,13 @@ header .media{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 100%;
     padding:0 20px;
     border-left: 1px solid rgba(128, 128, 128, 0.301);
-    font-size: 13px;
+    h1{
+        font-size: 24px;
+    }
 }
 
 .m{
@@ -83,16 +94,21 @@ header .media{
     justify-content: center;
     text-align: center;
     background-color: rgb(0, 18, 182);
-    border-radius: 6px;
-    height: 40px;
+    border-radius: 10px;
+    height: 35px;
     width: 35px;
-    font-size: 10px;
+   h1{
+     font-size: 16px;
     color: #fff;
+   }
 }
 
 .manetor{
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 13px;
+    h1{
+         color: rgba(0, 0, 0, 0.87);
+        font-size: 18px;
+        font-weight: 300;
+    }
 }
 
 .jd{
@@ -108,91 +124,116 @@ header .media{
     color: #fff;
 }
 
-.sidebar{
-    border-right: 1px solid rgba(128, 128, 128, 0.342);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24%;
-    gap: 220px;
+
+.sidebar {
+  width: 20%;
+  background: #fff;
+  padding: 20px 0;
+  height: 100vh;
 }
 
-.left-menu{
-    margin-top:20px;
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    padding: 0 20px;
-    color: grey;
-    font-size: 18px;
-     font-weight: lighter;
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
-.menu{
-    padding: 15px 0;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-   
+.menu-item:hover {
+  background: #e9ecef;
+  color: #007bff;
+  transform: translatey(4px);
 }
 
-.icon{
-    
-    margin-top: 5px;
-    height: 0px;
-    width: 30px;
+.menu-item .icon {
+  font-size: 20px;
+  width: 24px;
 }
 
-/*===================================main content =======================*/
+.menu-item span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu-item.active {
+    margin: 10px 10px;
+    border-radius: 16px;
+  background: #057cd1;
+  color: #fff;
+  font-weight: 600;
+}
+
+/*===================================main content=============================================================== =======================*/
+
+
 .content{
     display: flex;
     width: 100%;
+    gap: 20px;
+     background-color: rgba(145, 145, 143, 0.137);
 
 }
 .content-right{
-    padding-top: 40px;
-    padding-left: 50px;
-    background-color: rgba(145, 145, 143, 0.253);
-    width: 77%
+    padding-top: 30px;
+    padding-left: 12px;
+    width: 80%;
 
 }
 
 .storage{
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
     width: 95%;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+
 .head{
-    padding: 15px 15px;
     display: flex;
     justify-content: space-between;
 
     h2{
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 540;
         color: rgb(0, 0, 0);
     }
-
+    
     h3{
-        width: 130px;
-        border-radius: 20px;
+        font-size: 16px;
         color: red;
-        background-color: rgba(255, 192, 203, 0.418);
+        font-weight: 550;
     }
+   
 
     p{
+        font-size: 14px;
         color: grey;
     }
+}
+
+.over-limit{
+    text-align: center;
+    border-radius: 30px;
+    height: 30px;
+    width: 15%;
+    background-color: rgba(255, 192, 203, 0.322);
 }
 
 .head>div{
     line-height: 28px;
 }
 
+
+
 .capacity{
-    padding: 15px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,24 +251,96 @@ header .media{
     }
 }
 
+.extra-storage{
+    align-items: center;
+    border-radius: 16px;
+    width: 100%;
+    padding: 15px 40px;
+    color: rgb(122, 4, 4);
+    background-color: rgba(255, 192, 203, 0.418);
+    line-height: 28px;
 
-
-.bar{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    height: 2%;
-    color: red;
-    background-color: red;
-    border-radius: 10px;
-    overflow: hidden;
+    h4{
+        font-weight: 550;
+    }
+    p{
+        font-size: 15px;
+        color: red;
+    }
 }
 
-.bar2{
-    width: 15%;
-    height: 2%;
-    color: orange;
-    background-color: orange;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+.upgrade-button{
+   a{
+     color: #fff;
+     font-size: 17px;
+     font-weight: 550;
+   }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    width: 100%;
+    height: 44px;
+    background-color: rgba(0, 0, 255, 0.596);
+}
+
+
+/* ----------------------------------------------code for progress bar net*--------------------------------------------------*/
+
+.storage-container {
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.storage-text {
+  display: flex;
+  gap: 9px;
+  margin-bottom: 2px;
+  font-size: 30px;
+}
+
+.storage-text strong {
+    
+  color: #d93025;       
+}
+
+.free {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+/* Style the Native Progress Bar */
+.storage-progress {
+  width: 100%;
+  height: 8px;
+  border: none;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.storage-progress::-webkit-progress-value {
+  background: linear-gradient(to right, #fbbc05, #ea4335);
+  border-radius: 9999px;
+}
+
+/*================================================================ media files ===============================================*/
+
+.media-files{
+    padding: 50px 0;
+    width: 95%;
+} 
+
+.options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.options-right{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.options-right input:nth-child(1){
+    background-color: #d93025;
 }

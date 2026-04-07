@@ -25,41 +25,83 @@
     </header>
 
     <section class="content">
-        <div class="sidebar">
-           <div class="left-menu">
-            <div class="menu"><i class="fa-solid fa-house icon" ></i><h2>Dashboard</h2></div>
-            <div class="menu"><i class="fa-regular fa-image icon"></i><h2>Media Library</h2></i></div>
-            <div class="menu"><i class="fa-regular fa-circle-user icon"></i><h2>Contacts</h2></i></div>
-            <div class="menu"><i class="fa-solid fa-chart-column icon"></i><h2>Analytics</h2></div>
-            <div class="menu"><i class="fa-regular fa-folder icon"></i><h2>Documents</h2></div>
-           </div>
-           <div class="menu "><i class="fa-solid fa-gear icon"></i><h2>Settings</h2></div>
-        </div>
-        
 
+        <div class="sidebar">
+          <div class="left-menu">
+
+          <a href="#" class="menu-item">
+          <i class="fa-solid fa-house icon"></i>
+          <span>Dashboard</span>
+         </a>
+
+         <a href="#" class="menu-item active">
+         <i class="fa-regular fa-image icon"></i>
+         <span >Media Library</span>
+         </a>
+
+         <a href="#" class="menu-item">
+         <i class="fa-regular fa-circle-user icon"></i>
+         <span>Contacts</span>
+         </a>
+
+         <a href="#" class="menu-item">
+         <i class="fa-solid fa-chart-column icon"></i>
+         <span>Analytics</span>
+         </a>
+
+         <a href="#" class="menu-item">
+         <i class="fa-regular fa-folder icon"></i>
+         <span>Documents</span>
+         </a>
+
+  </div>
+
+  <!-- Settings outside the left-menu -->
+  <a href="#" class="menu-item settings-item">
+    <i class="fa-solid fa-gear icon"></i>
+    <span>Settings</span>
+  </a>
+</div>
+        
+    <!-- right side scrolling content for the images-->
+
+    
         <div class="content-right">
             <div class="storage">
                 <div class="head">
                     <div><h2>Storage Usage</h2>
                     <p>Monitor your storage consumption</p></div>
-                    <div><h3> ⚠ Over Limit </h3></div>
+                    <div class="over-limit"><h3> ⚠ Over Limit </h3></div>
                 </div>
 
-                <div class="capacity">
-                     <div><h1>1.8 GB</h1><p>used of <b>1 GB </b> free</p></div>
-                     <div class="bar">
-                        hhsh
-                        <div class="bar1"></div>
-                        <div class="bar2">hhh</div>
-                     </div>
+                <div class="storage-container">
+                    <div class="storage-text">
+                      <span><strong>1.8 GB</strong> </span>
+                      <span class="free"> used of <b style="color: rgb(0, 0, 0);">1 GB</b> free</span>
+                    </div>
+
+                    <progress value="1.8" max="2.1" class="storage-progress"></progress>
                 </div>
 
                 <div class="extra-storage">
-                    ⚠ <h4>Extra Storage Usage </h4>
+                     <h4> ⚠ Extra Storage Usage </h4>
                     <p>0.8 GB extra -> <b> $4.00</b> additional charge </p>
                 </div>
 
-                <button>Upgrade Storage</button>
+                <div class="upgrade-button"><a href="#">Upgrade Storage</a></div>
+            </div>
+
+            <!-- media files -->
+
+            <div class="media-files">
+                <div class="options">
+                    <div><h3>Media Files</h3></div>
+                    <div class="options-right">
+                        <div><input type="search" name="" id="" placeholder="search media..." class=""></div>
+                        <div><input type="text" name="" id=""placeholder="fff"></div>
+                        <div><input type="button" value="Upload Media"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
